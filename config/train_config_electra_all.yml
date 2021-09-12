@@ -1,0 +1,46 @@
+SEED:
+  random_seed: 42
+  
+WANDB:
+  run_name: 'electra_all'
+  
+DATALOADER:
+  num_workers: 32
+  shuffle:
+  pin_memory:
+  drop_last:
+
+TRAIN:
+  data_type: 'all'
+  model_name: 'kykim/electra-kor-base'
+  num_epochs: 7
+  batch_size: 64
+  learning_rate: 0.0005
+  early_stopping_patience: 5
+  model:
+  optimizer:
+  scheduler:
+  momentum:
+  weight_decay:
+  loss_function:
+
+PERFORMANCE_RECORD:
+  column_list:
+    - train_serial
+    - train_timestamp
+    - model_str
+    - optimizer_str
+    - loss_function_str
+    - metric_function_str
+    - early_stopping_patience
+    - batch_size
+    - epoch
+    - learning_rate
+    - momentum
+    - random_seed # -----------key columns-------------
+    - epoch_index 
+    - train_loss
+    - validation_loss
+    - train_score
+    - validation_score
+    - elapsed_time

@@ -1,0 +1,14 @@
+DATALOADER:
+  num_workers: 32
+  shuffle: False
+  pin_memory:
+  drop_last: False
+
+SEED:
+  random_seed: 42
+
+PREDICT:
+  model_name: 'kykim/funnel-kor-base'
+  trained_model_name: 'funnel'
+  batch_size: 64
+  submission_name: 'funnel'
